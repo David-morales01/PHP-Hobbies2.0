@@ -1,0 +1,301 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+    
+    li {
+        position: relative;
+        list-style: none;
+    }
+    
+    li>a {
+        color: white;
+    }
+    
+    body {
+        position: relative;
+        min-height: 100vh;
+        min-width: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .sidebar {
+        position: relative;
+        background-color: #343a40;
+        width: 300px;
+        transition: 1s ease-in-out;
+        display: block;
+        padding-inline: 20px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    }
+    
+    nav>ul>li {
+        padding-block: 10px;
+    }
+    
+    a>i,
+    a>svg {
+        margin-inline-end: 10px;
+    }
+    
+    .sub-menu {
+        position: relative;
+        display: none;
+        inset-inline-start: 30px;
+    }
+    
+    .sub-menu>li {
+        padding-block-start: 10px;
+    }
+    
+    .scroll-menu-span li:hover .sub-menu {
+        display: block;
+    }
+    
+    .sidebar span {
+        display: none;
+    }
+    
+    .sidebar__header {
+        margin-block: 30px;
+        font-size: 1em;
+        border-bottom: 2px solid gray;
+        color: white;
+        padding-block: 20px;
+    }
+    
+    .scroll-menu {
+        width: 60px;
+        justify-content: center;
+        padding-inline: 0px;
+        text-align: center;
+    }
+    
+    .scroll-menu-span div span {
+        display: contents;
+        position: relative;
+    }
+    
+    .sidebar span {
+        opacity: 0.6;
+    }
+    
+    .sidebar span:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    
+    .tooltip {
+        position: absolute;
+        width: max-content;
+        inset-block: -20px;
+        display: none;
+        color: blue;
+        font-weight: 900;
+    }
+    
+    td>a:hover .tooltip {
+        display: inline;
+    }
+    
+    .main {
+        position: relative;
+        width: 100%;
+        background-color: #f4f6f9;
+    }
+    
+    .main__header {
+        position: relative;
+        background-color: white;
+        height: 60px;
+        display: flex;
+        padding-inline: 20px;
+        align-items: center;
+    }
+    
+    .icon-menu {
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    
+    .main__body {
+        position: relative;
+        height: calc(100% - 120px);
+        padding-inline: 20px;
+        padding-block: 60px;
+    }
+    
+    .main__footer {
+        position: relative;
+        background-color: white;
+        height: 60px;
+        padding-inline: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .card {
+        position: relative;
+        background-color: white;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid rgba(128, 128, 128, 0.473);
+        padding-inline: 20px;
+        padding-block: 30px;
+    }
+    
+    .text-title {
+        text-align: center;
+        position: relative;
+        display: block;
+        width: 100%;
+        font-size: 2em;
+        padding-block-end: 20px;
+        font-weight: 900;
+    }
+    
+    .form {
+        display: block;
+    }
+    
+    .form>label {
+        cursor: pointer;
+    }
+    
+    .form>label>input {
+        outline: none;
+        position: relative;
+        width: 100%;
+        border: 1px solid rgba(128, 128, 128, 0.425);
+        border-radius: 6px;
+        cursor: pointer;
+        padding-block: 10px;
+        padding-inline-start: 10px;
+        padding-inline-end: 40px;
+        margin-block-start: 10px;
+        margin-block-end: 30px;
+    }
+    
+    .form>label>input:hover {
+        border: 1px solid white;
+        box-shadow: 0px 0px 10px 1px #398ab96c;
+    }
+    
+    .hobbies {
+        margin-block-start: 20px;
+    }
+    
+    .hobbies>label {
+        position: relative;
+        margin-inline-end: 30px;
+        cursor: pointer;
+    }
+    
+    .hobbies>label>input {
+        position: absolute;
+        inset-inline-end: -20px;
+        inset-block-end: 2px;
+        cursor: pointer;
+    }
+    
+    .button {
+        background: radial-gradient(#1C658C, #398AB9);
+        width: 100%;
+        border-radius: 6px;
+        cursor: pointer;
+        padding-block: 10px;
+        margin-block: 20px;
+        color: white;
+        border: none;
+        opacity: 0.8;
+    }
+    
+    .button:hover {
+        opacity: 1;
+    }
+    
+    .error {
+        box-shadow: 0px 0px 10px 1px red;
+    }
+    
+    .notError {
+        box-shadow: none;
+    }
+    
+    .table {
+        position: relative;
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: white;
+    }
+    
+    .table tr,
+    .table td,
+    .table th {
+        border: 1px solid rgba(128, 128, 128, 0.493);
+        padding-block: 4px;
+        padding-inline: 10px;
+        text-align: center;
+    }
+    
+    .table th {
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+    
+    .table tr {
+        position: relative;
+        width: 100%;
+    }
+    
+    .table tbody>tr:nth-child(even) {
+        background-color: rgba(201, 199, 199, 0.486);
+    }
+    
+    .table a {
+        color: black;
+    }
+    
+    .shadow::before {
+        position: absolute;
+        z-index: 10;
+        content: '';
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background-color: black;
+        pointer-events: none;
+    }
+    
+    .shadow .main__body,
+    .shadow .main__footer {
+        pointer-events: none;
+    }
+    
+    .detail p {
+        position: relative;
+        margin-block-end: 20px;
+    }
+    
+    svg {
+        position: relative;
+        inset-block: 2px;
+        width: 20px;
+        height: 20px;
+        fill: white;
+    }
+    
+    td>a>svg {
+        fill: black;
+    }
